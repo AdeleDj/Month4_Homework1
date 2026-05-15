@@ -13,3 +13,5 @@ class Book(models.Model):
     language = models.CharField(max_length=50)
     cover = models.ImageField(upload_to='covers/')
     created_at = models.DateTimeField(auto_now_add=True)
+    cover = models.ImageField(upload_to='books/', null=True, blank=True)
+    views = models.IntegerField(default=0)
